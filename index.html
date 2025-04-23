@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAXSTORE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2e2e2e, #4a4a4a, #c0c0c0);
+      color: #f0f0f0;
+      min-height: 100vh;
+      padding: 5vw;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: auto;
+      background: rgba(25, 25, 25, 0.95);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 180px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    .datetime {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      color: #aaa;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
+
+    .accordion {
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1c1c1c;
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #00d2ff;
+      background-color: #272727;
+      transition: all 0.2s;
+    }
+
+    .accordion-header:hover {
+      background-color: #353535;
+      transform: scale(1.01);
+    }
+
+    .accordion-header .icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      background: #1c1c1c;
+      color: #eaeaea;
+    }
+
+    .accordion-content a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #00d2ff;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .accordion-content a:hover {
+      color: #0096be;
+    }
+
+    .note, .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 1.5rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: pulse 2s infinite;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 400px) {
+      h1 { font-size: 1.3rem; }
+      .accordion-header { font-size: 0.95rem; }
+      .accordion-content { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="LAXSTORE Logo" class="logo" />
+    <div class="datetime" id="datetime"></div>
+    <h1>Selamat Datang di LAXSTORE</h1>
+    <div class="tagline">Solusi Hemat & Aman untuk Kebutuhan Game dan Digital Anda</div>
+
+    <div class="accordion">
+      <div class="accordion-header"><span class="icon">💎</span>Top Up Game</div>
+      <div class="accordion-content">
+        Layanan top up terpercaya: MLBB, Free Fire, PUBG, Valorant, dan lainnya. Harga Ter-murah sejagat, dan Terpercaya!
+        <br/><a href="https://wa.me/6285642962052?text=Halo%20admin,%20saya%20ingin%20top%20up%20game.">Chat Admin</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header"><span class="icon">🏷️</span>Jual Beli Akun</div>
+      <div class="accordion-content">
+        Mau jual/beli akun Game Free Fire, Mobile Legend, Honor Of King.
+        <br/><a href="https://wa.me/6285642962052?text=Halo%20admin,%20saya%20minat%20jual/beli%20akun.">Chat Admin</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header"><span class="icon">💉</span>Suntik Medsos</div>
+      <div class="accordion-content">
+        Naikkan followers dan views akun medsos kamu dengan layanan terpercaya!
+        <br/><a href="https://wa.me/6285642962052?text=Halo%20admin,%20saya%20ingin%20Suntik%20akun%20sosial%20media.">Tanya Sekarang</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header"><span class="icon">💳</span>Top Up Saldo</div>
+      <div class="accordion-content">
+        Isi saldo E-Wallet (OVO, DANA, Gopay, dll) dan anda bisa juga isi Pulsa, & Paket Internet.
+        <br/><a href="https://wa.me/6285642962052?text=Halo%20admin,%20saya%20ingin%20top%20up%20saldo.">Pesan Sekarang</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-header"><span class="icon">🌐</span>Medsos</div>
+      <div class="accordion-content">
+        <a href="https://tiktok.com/@laxstoreid" target="_blank">Tiktok</a>
+        <br/><a href="https://youtube.com/@Laxeeyt" target="_blank">YouTube</a>
+        <br/><a href="https://www.facebook.com/laxstoreid" target="_blank">Facebook</a>
+      </div>
+    </div>
+
+    <div class="note">Klik menu di atas untuk melihat detail layanan. Admin standby 24 jam!</div>
+    <div class="footer">- LAXSTORE -</div>
+  </div>
+
+  <a href="https://wa.me/6285642962052" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
+  </a>
+
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isVisible = content.style.display === 'block';
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+        content.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+
+    function updateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const time = now.toLocaleTimeString('id-ID');
+      const date = now.toLocaleDateString('id-ID', options);
+      document.getElementById("datetime").textContent = `${date} • ${time}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
